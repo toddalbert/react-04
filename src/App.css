@@ -1,3 +1,31 @@
+body {
+  background-color: #272262;
+  color: white;
+}
+h2 {
+  color: #ff216e;
+}
+.course-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.course {
+  margin: 1em;
+  width: calc(33.3% - 4em);
+  padding: 1em;
+  background-color: rgba(255,255,255,.25);
+  border-radius: 12px;
+}
+.course > h3 {
+  float: left;
+}
+.course > p {
+  float: right;
+  padding-top: 6px;
+}
+
 .App {
   text-align: center;
 }
