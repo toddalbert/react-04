@@ -18,9 +18,6 @@ class Courses extends React.Component {
         this.setState({ courses: data })
       })
   }
-
-
-
   render() {
     let { courses } = this.state
     if (courses.length === 0) {
@@ -30,8 +27,8 @@ class Courses extends React.Component {
       <>
         <h2>Short Courses</h2>
         <div className="course-section">
-          {courses.map(course => {
-            return <CourseItem course={course} />
+          {courses.map((item, index) => {
+            return <CourseItem key={index} course={item} />
           })}
         </div>
       </>

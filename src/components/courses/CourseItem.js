@@ -4,7 +4,7 @@ function CourseItem({ course }) {
   return (
     <div className="course">
       <h3>{course.title}</h3>
-      <p>{course.cost}</p>
+      <p>{course.description}</p>
     </div>
   )
 }
