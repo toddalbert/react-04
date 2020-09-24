@@ -1,4 +1,7 @@
 import React from 'react'
+import CardColumns from 'react-bootstrap/CardColumns'
+import Card from 'react-bootstrap/Card'
+import Container from 'react-bootstrap/Container'
 
 class Courses extends React.Component {
   constructor(props) {
@@ -16,20 +19,28 @@ class Courses extends React.Component {
   render() {
     let { courses } = this.state
     return (
-      <>
+      <Container>
         <h2>Short Courses</h2>
         {(courses.length === 0)
           ? <p>Loading...</p>
-          : <div className="course-section">
+          : <CardColumns>
             {/* I want to render a LIST && KEYS */}
             {courses.map((aCourse, index) => {
               return (
-                <div className="course" key={index}>{aCourse.title}</div>
+                <Card key={index}>
+                  <Card.Img variant="top" src={aCourse.image} />
+                  <Card.Body>
+                    <Card.Title>{aCourse.title}</Card.Title>
+                    <Card.Text>
+                      {aCourse.description}
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
               )
             })}
-          </div>
+          </CardColumns>
         }
-      </>
+      </Container>
     )
   }
 }
