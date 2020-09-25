@@ -4,7 +4,9 @@ import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 
 function Home() {
+  //     These go everywhere    This in top-level only
   const [counter, setCounter] = useState(0)
+
   return (
     <>
       <Jumbotron fluid>
