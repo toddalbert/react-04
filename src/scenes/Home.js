@@ -5,7 +5,6 @@ import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 
 function Home() {
-  //     These go everywhere    This in top-level only
   const [counter, setCounter] = useState(0)
   useEffect(() => {
     document.title = `You clicked ${counter} times!`
